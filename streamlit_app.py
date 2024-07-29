@@ -3,10 +3,11 @@ import openai
 import streamlit as st
 from parse_hh import get_candidate_info, get_job_description
 
-# Check for the API key
+# Ensure the OpenAI API key is set
 api_key = os.getenv("OPENAI_API_KEY")
 st.write(f"OpenAI API Key: {api_key}")
 
+# Initialize OpenAI client
 client = openai.Client(api_key=api_key)
 
 SYSTEM_PROMPT = """
@@ -48,4 +49,5 @@ if st.button("Score CV"):
         response = request_gpt(SYSTEM_PROMPT, user_prompt)
 
     st.write(response)
+
 
