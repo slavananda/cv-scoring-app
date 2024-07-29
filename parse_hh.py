@@ -1,4 +1,5 @@
 import requests
+from bs4 import BeautifulSoup
 
 def get_html(url: str):
     sanitized_url = url.encode('ascii', 'ignore').decode()
@@ -8,8 +9,6 @@ def get_html(url: str):
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
         },
     )
-
-from bs4 import BeautifulSoup
 
 def extract_vacancy_data(html):
     soup = BeautifulSoup(html, "html.parser")
