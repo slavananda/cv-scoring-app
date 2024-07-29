@@ -115,4 +115,3 @@ def get_job_description(url: str):
     response = get_html(url)
     return extract_vacancy_data(response.text)
 
-
