@@ -3,7 +3,7 @@ import openai
 import streamlit as st
 from parse_hh import get_candidate_info, get_job_description
 
-# Temporary check for the API key
+# Check for the API key
 api_key = os.getenv("OPENAI_API_KEY")
 st.write(f"OpenAI API Key: {api_key}")
 
