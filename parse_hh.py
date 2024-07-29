@@ -17,17 +17,13 @@ def extract_vacancy_data(html):
     title = soup.find("h1", {"data-qa": "vacancy-title"}).text.strip()
 
     # Extract salary
-    salary = soup.find(
-        "span", {"data-qa": "vacancy-salary-compensation-type-net"}
-    ).text.strip()
+    salary = soup.find("span", {"data-qa": "vacancy-salary-compensation-type-net"}).text.strip()
 
     # Extract experience
     experience = soup.find("span", {"data-qa": "vacancy-experience"}).text.strip()
 
     # Extract employment mode
-    employment_mode = soup.find(
-        "p", {"data-qa": "vacancy-view-employment-mode"}
-    ).text.strip()
+    employment_mode = soup.find("p", {"data-qa": "vacancy-view-employment-mode"}).text.strip()
 
     # Extract company
     company = soup.find("a", {"data-qa": "vacancy-company-name"}).text.strip()
