@@ -62,3 +62,4 @@ if st.button("Score CV"):
         except Exception as e:
             st.error(f"Ошибка при обработке данных: {e}")
 
+
