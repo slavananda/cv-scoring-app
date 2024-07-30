@@ -60,4 +60,3 @@ if st.button("Score CV"):
                 st.error("Не удалось получить ответ от OpenAI API.")
         except Exception as e:
             st.error(f"Ошибка при обработке данных: {e}")
-
