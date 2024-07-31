@@ -1,15 +1,9 @@
-import os
 import openai
 import streamlit as st
 from parse_hh import get_candidate_info, get_job_description
 
-# Проверка переменной окружения
-api_key = os.getenv("OPENAI_API_KEY")
-st.write(f"Debug: OPENAI_API_KEY is set to: {api_key}")
-
-if api_key is None:
-    st.error("API key is not set. Please set the OPENAI_API_KEY environment variable.")
-    st.stop()
+# Явное указание API ключа
+api_key = "sk-proj-SAVcbwAIfKjS3DJL0msPT3BlbkFJZ8krfI1f32JWyHEVQGVx"
 
 client = openai.Client(api_key=api_key)
 
